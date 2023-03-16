@@ -13,6 +13,7 @@ import {v4} from 'uuid';
 import validator from 'validator';
 
 const generateUniqueID = (firstName, lastName) => {
+    // Concat $firstName$lastName$generatedUUID
     return `${firstName[0].toLowerCase()}${lastName.toLowerCase()}${v4().replace(/-/g, '').slice(0, 8)}`;
 };
 
